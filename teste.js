@@ -1,14 +1,12 @@
 console.log("oi")
+var valorInteiro=-1
 
-var valorInteiro=10
-
-var contador=0
-while (contador<=valorInteiro) {
-    console.log(contador<=valorInteiro)
+var contador=10
+while (contador>valorInteiro) {
+    console.log(contador>valorInteiro)
 console.log("repetição numero: ",contador*5)
-contador++
+contador--
 }
-
 //exemplo de outra maneira
 //
 
