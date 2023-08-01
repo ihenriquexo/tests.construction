@@ -1,3 +1,4 @@
+//arrays 6
 nomes=[]
 notas=[]
 continuar=true
