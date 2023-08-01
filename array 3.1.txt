@@ -1,0 +1,22 @@
+//errei e não faço ideia na onde
+idades=[]
+alturas=[]
+somaAltura=0
+
+for (let i = 0; i < 4; i++) {
+    idade=prompt("insira a idade "+i)
+    altura=prompt("insira a altura"+i)
+    idades[i]=idade
+    alturas[i]=altura
+    somaAltura+=altura}
+
+    mediaAltura=somaAltura/alturas.length
+    var contador=0
+    for (var i = 0; i < 4; i++) {
+        if (idades[i]>13&&mediaAltura>alturas[i]) {
+            contador++
+        }
+    
+    }
+    console.log("Quantidade de alunos com mais de 13 anos e altura menor que a media: "+contador)
+    

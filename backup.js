@@ -165,4 +165,94 @@ console.log("recomendo que espere o sinal ficar verde e prossiga")
         console.log("recomendo que coloque o cinto,espere o sinal ficar verde e prossiga")
         }
 
-        //
+        //slet
+        case "2":
+    var loginSenha=prompt("digite sua senha de login:")
+    for (var i=0;i<nomes.length;i++) {
+    if(loginName==nomes[i]){
+        if(loginSenha==senhas[i]){
+            console.log("entrou")
+            i=nomes.length
+        }
+} else if(i==nomes.length-1){
+    console.log("nome ou senha incorreta")
+    
+}
+    }
+    break;
+    case "3" :
+        var nomesSup=[]
+var senhasSup=[]
+var contadorSup=0
+var nomeExcluir=prompt("insira o nome que deseja excluir")
+for (var i=0;i<nomes.length;i++){
+    if (nomeExcluir==nomes[i]){
+        console.log("usuario excluido")
+    }else{nomes[contadorSup]=nomes[i]
+senhasSup[contadorSup]=senhas[i]
+contadorSup++
+    }
+}
+nomes=nomesSup
+senhas=senhasSup
+break;
+defalt:
+continuar=false
+break;
+
+//+1 arrays que eu não entendi
+//array ou vetores
+//length=comprimento
+var modelo = []
+var ano= []
+var valor=[]
+continuar=true
+contadorArray=0
+
+//loop para cadastrar novos carros
+
+while (continuar) {
+
+    var modelos=prompt("modelo")
+    var anos=parseInt(prompt("ano"))
+    var valors =parseFloat(prompt("valor"))
+    console.log(modelos+anos+valor)
+modelos[contadorArray]=modelo
+anos[contadorArray]=ano
+valors[contadorArray]=valor
+    contadorArray++
+    par=prompt("deseja adicionar outro veiculo?(s ou n)")
+if (par=="n") {
+    continuar=false
+}
+}
+//exibir nome e valor dos carros inseridos
+console.log("carros cadastrados")
+for (var i =0; i <modelos.length; i++){
+    console.log(modelo[i]+", "+anos[i]+", valor: "+valors[i])
+}
+//ordenar os vetores pelo preço dos carros
+for (var i = 0; i < valors.length-1; i++) {
+    for (var j = 0; j < valors.length-1; j++) {
+        if (valors[j]>valors[j+1]) {
+            //trocar a posição dos elementos nos três arrays
+            var maiorValor=valores[j]
+         valors[j]=valors[j+i]
+         valors[j+i]=maiorValor
+         
+         var modeloMaiorValor=modelos[j]
+modelos[j]=modelos[j+i]
+valors[j+i]=modeloMaiorValor
+
+var anoMaiorValor=anos[j]
+anos[j]=anos[j+i]
+anos[j+i]=anoMaiorValor    
+}   
+    }   
+}
+//exibir nome, ano e valor dos carros ordenados pelo preço
+console.log("Carros ordenados pelo preço:")
+for (var i=0; i<modelos.length; i++){
+console.log(modelos[i]+", "+anos[i]+", Valor: "+valors[i])
+}
+//
