@@ -1,3 +1,4 @@
+//desafio 5.4 concluido
 umArray=[1,0,4,3,2,6]
 
 for (let i = 0; i < umArray.length; i++) {
