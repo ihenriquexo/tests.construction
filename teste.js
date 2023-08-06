@@ -1,31 +1,25 @@
-a=criarProjeto()
-b=CalculoDoprojeto()
-
-
+nomes=[]
+orcamentos=[]
+contador=0
+criarProjeto()
+calcularProjeto()
 function criarProjeto() {
-    NomeProjeto=prompt("qual o nome do projeto?")
-    OrcamentoTotal=parseInt(prompt("qual o orçamento total?"))
+    nomes[contador]=prompt("qual o nome do projeto?")
+    orcamentos[contador]=parseInt(prompt("qual o orçamento total?"))
+    console.log("projeto cria com sucesso!")
 }
-function CalculoDoprojeto(NomeProjeto,OrcamentoTotal) {
-    NomeProjeto;
-    OrcamentoAnterior=OrcamentoTotal
-    while (true) {
-        TipoDespesa=prompt("qual o tipo de despesa?r=receita|d=despesa")
-    if (TipoDespesa=="r") {
-        ValorReceita=parseInt(prompt("qual o valor de receita?"))
-        OrcamentoTotal+=ValorReceita;console.log("receita adicionada "+OrcamentoTotal)
-        return
-    }else if(TipoDespesa=="d"){
-        Valordespesa=parseInt(prompt("qual o valor da despesa?"))
-        Valordespesa-OrcamentoTotal
-        if (d<0) {
-            console.log("orçamento indisponivel")
-            OrcamentoTotal=OrcamentoAnterior
-            return
-        }else{OrcamentoTotal-=Valordespesa
-            console.log("despesa adicionada "+OrcamentoTotal)
-            return}
-    }else{console.log("tipo invalido digite r para receita ou d para despesa")}
+function calcularProjeto(orcamento,valor,tipo) {
+    for (let i = 0; i < nomes.length; i++) {
+        nomes[i]
+        valor=parseInt(prompt("valor"))
+        tipo=prompt("esse valor é? r=receita|d=despesa")
+        if (tipo=="r") {
+            orcamentos[i]+=valor
+        }else if (tipo=="d") {
+            if (valor-orcamentos[i]>0) {
+                console.log("saldo indisponivel!")
+            }orcamentos[i]-=valor
+        }console.log(orcamentos[i])
+    }
     
-} 
 }
