@@ -105,3 +105,19 @@ function calcularProjeto(orcamento,valor,tipo) {
     }
     
 }
+//function 4.2
+//observação: ok é isso
+numero=parseInt(prompt("numero"))
+console.log(verifNum())
+function verifNum() {
+    somaDivisores=0
+    for (let i = 1; i < numero; i++) {
+        if (numero%1===0) {
+            somaDivisores+=i
+        }
+        
+    }
+    return somaDivisores==numero
+}
+
+//
