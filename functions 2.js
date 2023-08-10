@@ -1,3 +1,4 @@
+//functions 2
 var nome
 var salario
 con=true
