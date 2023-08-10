@@ -1,3 +1,4 @@
+//functions 3
 var nomes=[]
 var senhas=[]
 contador=0
