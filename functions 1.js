@@ -1,3 +1,4 @@
+//functions 1
 c=[]
 contador=0
 con=true
